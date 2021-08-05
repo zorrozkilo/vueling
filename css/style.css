@@ -1,0 +1,136 @@
+/*----FONTS-----*/
+
+@font-face {
+  font-family: "Brandon-Bold";
+  src: url("../fonts/BrandonText-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Stabile";
+  src: url("../fonts/Stabile W00 Regular.ttf");
+}
+
+@font-face {
+  font-family: "AmaticSC-Bold";
+  src: url("../fonts/AmaticSC-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+/*----LOADER-----*/
+
+.loader {
+  position: fixed;
+  background-color: #f6001b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  opacity: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 99;
+  animation-name: transicionLoader;
+  animation-duration: 2s;
+}
+
+@keyframes transicionLoader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*----GENERALS-----*/
+
+:root {
+  --amarillo: #ffcc00;
+  --grisClaro: #b2b2b1;
+  --grisOscuro: #4f4f4e;
+}
+
+body {
+  overflow-x: hidden;
+}
+.flex{
+  display: flex;
+}
+.column{
+  flex-direction: column;
+}
+.row{
+  flex-direction: row;
+}
+.center{
+  align-items: center;
+  justify-content: center;
+}
+.txt-negro{
+  color: black;
+}
+.txt-blanco{
+  color: white;
+}
+h1,h2,h3,h4{
+  font-family: "Brandon-Bold";
+}
+.hand{
+  font-family: "Stabile";
+  
+}
+
+.hero{
+  background: var(--amarillo);
+  height: 100vh;
+  width: 100%;
+}
+.hero h1{
+  line-height: 1.2;
+}
+  
+@keyframes text-clip {
+  0% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+.hero h1:nth-child(1){
+  font-size: 30px;
+  animation:text-clip 2s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+.hero h1:nth-child(2){
+  font-size: 61px;
+  margin-bottom: -10px;
+  animation:text-clip 2s 1.1s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+.hero h1:nth-child(3){
+  font-size: 42px;
+  animation:text-clip 2s 1.2s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+.hero h1:nth-child(4){
+  font-size: 46px;
+  animation:text-clip 2s 1.3s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+.hero h1:nth-child(5){
+  font-size: 3em;
+  animation:text-clip 2s 1.4s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
