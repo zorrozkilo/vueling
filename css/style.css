@@ -112,17 +112,33 @@ p {
   font-family: "Brandon-Regular";
   text-transform: uppercase;
   font-weight: normal;
+  font-size: 18px;
 }
 
 header {
   position: absolute;
-  background: white;
+  background: transparent;
   top: 0;
   height: 150px;
   width: 100%;
   padding: 20px;
   justify-content: space-between;
   align-items: center;
+  z-index: 30;
+}
+header a {
+  color: gray;
+}
+header a:hover {
+  color: black;
+}
+.header-fondo {
+  position: absolute;
+  background: white;
+  top: 0;
+  height: 150px;
+  width: 100%;
+  z-index: 5;
 }
 header img {
   max-width: 200px;
@@ -138,13 +154,24 @@ header li a {
   top: 0;
   width: 100%;
   height: 100vh;
-  margin-top: 0px;
+  z-index: 10;
+  margin-top: -35px;
 }
 .hero {
+  position: relative;
+  top: 0;
+  background: transparent;
+  height: 100vh;
+  width: 100%;
+  padding-top: 30vh;
+  z-index: 20;
+}
+.hero-fondo {
+  position: absolute;
+  top: 0;
   background: var(--amarillo);
   height: 100vh;
   width: 100%;
-  padding-top: 120px;
   border: solid 20px white;
 }
 
@@ -163,6 +190,19 @@ header li a {
 }
 .hand-blanco {
   color: white;
+}
+.sigue-leyendo {
+  margin-top: 30px;
+}
+.sigue-leyendo a {
+  color: black;
+}
+.sigue-leyendo a:hover {
+  color: white;
+}
+.flecha {
+  width: 30px;
+  margin-top: -5px;
 }
 
 @keyframes text-clip {
@@ -205,14 +245,27 @@ header li a {
   padding: 100px 40px;
 }
 .titular {
-  font-family: "Brandon-Bold";
+  font-family: "Brandon-Black";
+  font-weight: normal;
   font-size: 50px;
   text-transform: uppercase;
   margin-bottom: 50px;
 }
-
+.titular-mediano {
+  font-size: 40px;
+  margin-top: 50px;
+}
 .video-general img {
   width: 80%;
+}
+.que-buscamos p {
+  max-width: 650px;
+  text-align: center;
+}
+.carrusel {
+  background: lightgray;
+  width: 100%;
+  height: 100vh;
 }
 .caja-icono {
   max-width: 300px;
@@ -223,6 +276,7 @@ header li a {
 .caja-icono img {
   max-width: 60%;
 }
+.que-buscamos,
 .hacer {
   background: var(--amarillo);
   border: solid 20px white;
@@ -261,4 +315,10 @@ footer {
   justify-content: space-between;
   padding: 20px 50px;
   color: white;
+}
+
+@media (max-width: 1024px) {
+  .row {
+    flex-direction: column !important;
+  }
 }
