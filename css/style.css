@@ -1,18 +1,31 @@
 /*----FONTS-----*/
 
 @font-face {
+  font-family: "Brandon-Light";
+  src: url("../fonts/BrandonText-Light.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Brandon-Regular";
+  src: url("../fonts/BrandonText-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
   font-family: "Brandon-Bold";
   src: url("../fonts/BrandonText-Bold.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Brandon-Black";
+  src: url("../fonts/BrandonText-Black.ttf");
+  font-weight: normal;
 }
 
 @font-face {
   font-family: "Stabile";
   src: url("../fonts/Stabile W00 Regular.ttf");
-}
-
-@font-face {
-  font-family: "AmaticSC-Bold";
-  src: url("../fonts/AmaticSC-Bold.ttf");
+  font-weight: normal;
 }
 
 * {
@@ -67,90 +80,185 @@
 body {
   overflow-x: hidden;
 }
-.flex{
+.flex {
   display: flex;
 }
-.column{
+.column {
   flex-direction: column;
 }
-.row{
+.row {
   flex-direction: row;
 }
-.center{
+.center {
   align-items: center;
   justify-content: center;
 }
-.txt-negro{
+.txt-negro {
   color: black;
 }
-.txt-blanco{
+.txt-blanco {
   color: white;
 }
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4,
+strong,
+a {
   font-family: "Brandon-Bold";
+  font-weight: normal;
 }
-.hand{
-  font-family: "Stabile";
-  
+p {
+  font-family: "Brandon-Regular";
+  text-transform: uppercase;
+  font-weight: normal;
 }
-header{
-  position:absolute;
+
+header {
+  position: absolute;
   background: white;
   top: 0;
-  height:100px;
+  height: 150px;
   width: 100%;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
 }
-.avion img{
+header img {
+  max-width: 200px;
+}
+header nav {
+  margin-bottom: 40px;
+}
+header li a {
+  margin-left: 40px;
+}
+.avion img {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100vh;
-  margin-top: -50px;
+  margin-top: 0px;
 }
-.hero{
+.hero {
   background: var(--amarillo);
   height: 100vh;
   width: 100%;
-  padding-top: 50px;
+  padding-top: 120px;
+  border: solid 20px white;
 }
 
-.hero h1{
+.hero h1 {
   line-height: 1.2;
+  font-size: 33px;
+  text-align: center;
+  font-family: "Brandon-Regular";
+  font-weight: normal;
+  color: black;
 }
-  
+.hand {
+  font-family: "Stabile" !important;
+  font-size: 66px !important;
+  font-weight: normal;
+}
+.hand-blanco {
+  color: white;
+}
+
 @keyframes text-clip {
   0% {
     clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   }
   50% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
-.hero h1:nth-child(1){
+/*.hero h1:nth-child(1) {
   font-size: 30px;
-  
-  animation:text-clip 2s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+
+  animation: text-clip 2s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
-.hero h1:nth-child(2){
+.hero h1:nth-child(2) {
   font-size: 61px;
 
   margin-bottom: -10px;
-  animation:text-clip 2s 1.1s cubic-bezier(0.5, 0, 0.1, 1) both;
+  animation: text-clip 2s 1.1s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
-.hero h1:nth-child(3){
+.hero h1:nth-child(3) {
   font-size: 42px;
 
-  animation:text-clip 2s 1.2s cubic-bezier(0.5, 0, 0.1, 1) both;
+  animation: text-clip 2s 1.2s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
-.hero h1:nth-child(4){
+.hero h1:nth-child(4) {
   font-size: 46px;
- 
-  animation:text-clip 2s 1.3s cubic-bezier(0.5, 0, 0.1, 1) both;
+
+  animation: text-clip 2s 1.3s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
-.hero h1:nth-child(5){
+.hero h1:nth-child(5) {
   font-size: 3em;
 
-  animation:text-clip 2s 1.4s cubic-bezier(0.5, 0, 0.1, 1) both;
+  animation: text-clip 2s 1.4s cubic-bezier(0.5, 0, 0.1, 1) both;
+}*/
+.padding {
+  padding: 100px 40px;
+}
+.titular {
+  font-family: "Brandon-Bold";
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.video-general img {
+  width: 80%;
+}
+.caja-icono {
+  max-width: 300px;
+  text-align: center;
+  margin: 30px;
+  justify-content: flex-start;
+}
+.caja-icono img {
+  max-width: 60%;
+}
+.hacer {
+  background: var(--amarillo);
+  border: solid 20px white;
+}
+.hacer-imagen img {
+  width: 80%;
+}
+.hacer-imagen,
+.hacer-contenedor-textos {
+  max-width: 50%;
+  padding: 20px;
+}
+.hacer-imagen {
+  align-items: center;
+  justify-content: flex-end;
+}
+.hacer-contenedor-textos {
+  align-items: flex-start;
+}
+.hacer-textos {
+  width: 70%;
+  align-items: center;
+}
+.hacer-textos img {
+  width: 120px;
+  margin-right: 10px;
+}
+.galeria {
+  background: lightgray;
+  width: 100%;
+  height: 100vh;
+}
+footer {
+  background: black;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  color: white;
 }
