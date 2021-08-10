@@ -48,12 +48,12 @@
   </head>
 
   <body>
-    <!--LOADER
+    <!--LOADER-->
 
-    <div class="loader"></div>-->
+    <div class="loader"></div>
 
     <!--HEADER-->
-    <header class="flex row">
+    <header class="flex">
         <img src="img/logo.svg" alt="">
         <nav>
             <ul class="flex row ">
@@ -63,27 +63,11 @@
                 <li><a href="#formulario">VER PARTICIPANTES</a></li>
             </ul>
         </nav>
+        <img class="boton-menu" src="img/menu.svg" alt="" onclick="cerrarMenumovil()">
     </header>
     <div class="header-fondo"></div>
 
-    <!--<header class="animate__animated animate__fadeInDown animate__faster delayLoader">
-        <div id="logo" class="logo">
-            <img src="img/logo-bilbao-bizkaia.svg" alt="">
-            <img src="img/bilbaobizkaialover.png" alt="">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#que-buscamos">QUÉ BUSCAMOS</a></li>
-                <li><a href="#por-que-participar">POR QUÉ PARTICIPAR</a></li>
-                <li><a href="#que-tienes-que-hacer">QUÉ TIENES QUE HACER</a></li>
-                <li><a href="#formulario">FORMULARIO DE inscripción</a></li>
-                <li><a class="bold">ES</a> | <a href="/eus">EUS</a></li>
-            </ul>
-        </nav>
-        <img class="boton-menu" src="img/menu.svg" alt="" onclick="cerrarMenumovil()">
-    </header>-->
-
-    <!--MENÚ MOVIL
+    <!--MENÚ MOVIL-->
 
     <section id="menu-movil" class="none">
         <img class="boton-menu boton-cerrar-menu animate__animated animate__fadeIn" src="img/close.svg" alt="" onclick="cerrarMenumovil()">
@@ -103,21 +87,20 @@
         <div class="animate__animated animate__fadeIn delayLoader3">
             <a href="">ES</a> | <a href="/eus">EUS</a>
         </div>
-    </section>-->
+    </section>
 
     <!--HERO-->
       <div class="avion">
-      <img
+      <img class="imagen-avion imagen-avion1"
         src="img/avion.svg"
-        class="animate__animated animate__fadeIn"
         alt=""
       />
-      <img
+      <img class="imagen-nubes imagen-nubes1"
         src="img/nubes.svg"
-        class="animate__animated animate__fadeIn"
         alt=""
       />
-      <img src="img/pajaro.svg" alt="" />
+      <img class="imagen-pajaro"
+      src="img/pajaro.svg" alt="" />
     </div>
     <div class="hero-fondo"></div>
     <section class="hero flex column center">
@@ -295,7 +278,7 @@
 
     <footer class=" flex row ">
       <img src="img/logos-blanco.svg" alt="logo Vueling y Bilbao Bizkaia" />
-      <div class="enlaces-footer">
+      <div class="enlaces-footer flex row">
           <a href="/terminos-y-condiciones-de-participacion" target="_blank"
             >Condiciones de participación</a
           >
@@ -346,20 +329,49 @@
       new WOW().init();
     </script>
     <script>
-      gsap.registerPlugin(ScrollTrigger);
-
-      let sections = gsap.utils.toArray(".panel");
-
-      gsap.to(sections, {
-        xPercent: -100 * (sections.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".container",
-          pin: true,
-          scrub: true,
-          end: 3000,
-        },
+     
+      gsap.from('.imagen-avion', {
+        duration: 1,
+        scale: 0,
+        x: '-30%',
+        ease:'easeOut',
+        delay: 1,
       });
+
+      gsap.from('.imagen-avion1', {
+        duration: 1,
+        y: '2px',
+        repeat: -1, 
+        yoyo: true,
+        delay: 2,
+        ease:'easeOut',
+      });
+
+      gsap.from('.imagen-nubes1', {
+        duration: 1,
+        opacity: 0,
+        delay: 1,
+      });
+
+      gsap.from('.imagen-nubes', {
+        duration: 1,
+        y:'2px',
+        repeat: -1, 
+        yoyo: true,
+        ease: "easeOut",
+        delay: 1,
+      });
+      gsap.from('.imagen-pajaro', {
+        duration: 1,
+        y: '2px',
+        repeat: -1, 
+        yoyo: true,
+        delay: 2,
+        ease:'easeOut'
+
+
+      });
+
     </script>
     <script>
       new Splide(".splide", {
