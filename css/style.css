@@ -233,6 +233,12 @@ header li a {
 .hero h1:nth-child(5) {
   animation: text-clip 2s 1.4s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
+.hero h1:nth-child(6) {
+  animation: text-clip 2s 1.6s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+.hero .sigue-leyendo {
+  animation: text-clip 2s 1.8s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
 
 .padding {
   padding: 100px 40px;
