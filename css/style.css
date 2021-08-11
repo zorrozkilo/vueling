@@ -45,11 +45,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   bottom: 0;
   width: 100%;
   z-index: 99;
-  animation-name: transicionLoader;
-  animation-duration: 1s;
   animation: transicionLoader 1s ease-out;
 }
 
@@ -109,6 +108,10 @@ p {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 18px;
+}
+.borde-blanco {
+  background: var(--amarillo);
+  border: solid 20px white;
 }
 
 header {
@@ -172,10 +175,8 @@ header li a {
 .hero-fondo {
   position: absolute;
   top: 0;
-  background: var(--amarillo);
   height: 100vh;
   width: 100%;
-  border: solid 20px white;
 }
 
 .hero h1 {
@@ -257,6 +258,7 @@ header li a {
 }
 .video-general img {
   width: 80%;
+  cursor: pointer;
 }
 .que-buscamos p {
   max-width: 650px;
@@ -266,16 +268,13 @@ header li a {
   justify-content: space-between;
   padding: 50px 5%;
 }
-.carrusel img {
+.carrusel div {
   width: 22%;
-  transition: all 0.2s;
-  cursor: pointer;
 }
-.carrusel img:hover {
-  transform: scale(1.05);
-  -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
+.carrusel div img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 .caja-icono {
   max-width: 300px;
@@ -285,11 +284,6 @@ header li a {
 }
 .caja-icono img {
   max-width: 60%;
-}
-.que-buscamos,
-.hacer {
-  background: var(--amarillo);
-  border: solid 20px white;
 }
 .hacer-imagen img {
   width: 80%;
@@ -359,6 +353,9 @@ footer a {
   .padding {
     padding: 80px 20px;
   }
+  .borde-blanco {
+    border: 10px solid white;
+  }
   .titular {
     font-size: 35px;
     margin-bottom: 20px;
@@ -393,7 +390,7 @@ footer a {
   .avion img {
     margin-top: -95px;
   }
-  .carrusel img {
+  .carrusel div {
     width: 100%;
     margin-bottom: 40px;
   }

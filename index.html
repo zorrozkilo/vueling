@@ -24,6 +24,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="css/style.css" as="styles">
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -51,14 +52,14 @@
 
   <body>
     <!--LOADER-->
-    <div class="body" style="display: none;">
+    <div class="body" >
 
     <div class="loader"></div>
 
     
 
     <!--HEADER-->
-    <header class="flex">
+    <header class="flex" >
         <img src="img/logo.svg" alt="">
         <nav>
             <ul class="flex row ">
@@ -107,7 +108,7 @@
       <img class="imagen-pajaro imagen-pajaro1"
       src="img/pajaro.svg" alt="" />
     </div>
-    <div class="hero-fondo"></div>
+    <div class="hero-fondo borde-blanco"></div>
     <section class="hero flex column center">
       <div>
         <h1 class="">CUÉNTANOS</h1>
@@ -131,7 +132,7 @@
 
     <!--QUÉ BUSCAMOS-->
 
-    <section id="que-buscamos" class="que-buscamos flex column center padding">
+    <section id="que-buscamos" class="que-buscamos flex column center padding borde-blanco">
         <div class="participar-titular flex column center">
             <h2 class="titular">¿por qué tú?</h2>
             <p>comparte un vídeo de hasta 30" <strong>contándonos</strong> los rincones favoritos de tu ciudad. Por ejemplo, enséñanos tu restaurante favorito o ese lugar imprescindible para desconectar.</br></br>
@@ -139,10 +140,10 @@
             <h2 class="titular titular-mediano">¡te estamos buscando!</h2>  
         </div>
         <div class="carrusel flex row">
-          <img src="img/naturelovers-cast-des.png" alt="">
-          <img src="img/sealovers-cast-des.png" alt="">
-          <img src="img/urbanlovers-cast-des.png" alt="">
-          <img src="img/foodlovers-cast-des.png" alt="">
+          <div class="anim-tarj1"> <img src="img/naturelovers-cast-des.png" alt=""></div>
+          <div class="anim-tarj2"> <img src="img/sealovers-cast-des.png" alt=""></div>
+          <div class="anim-tarj3"> <img src="img/urbanlovers-cast-des.png" alt=""></div>
+          <div class="anim-tarj4"> <img src="img/foodlovers-cast-des.png" alt=""></div>
         </div>
           
     </section>
@@ -185,16 +186,7 @@
         <h2 class="titular">¿por qué participar?</h2>
       </div>
       <div class="participar-iconos flex row">
-        <div
-          class="
-            caja-icono
-            flex
-            column
-            center
-            wow
-            animate__animated animate__fadeInUp
-          "
-        >
+        <div class="caja-icono flex column center">
           <img src="img/icono1.svg" alt="" />
           <p>
             PODRÁS MOSTRAR AL MUNDO LO MÁS BONITO DE TU CIUDAD A TRAVÉS DE LAS
@@ -202,16 +194,7 @@
             <strong>VISITBISCAY</strong> Y <strong>BILBAOTURISMO</strong>.
           </p>
         </div>
-        <div
-          class="
-            caja-icono
-            flex
-            column
-            center
-            wow
-            animate__animated animate__fadeInUp
-          "
-        >
+        <div class="caja-icono flex column center">
           <img src="img/icono2.svg" alt="" />
           <p>
             podrás ganar un fantástico
@@ -219,16 +202,7 @@
             <strong>dos personas</strong> a <strong>bilbao bizkaia</strong>.
           </p>
         </div>
-        <div
-          class="
-            caja-icono
-            flex
-            column
-            center
-            wow
-            animate__animated animate__fadeInUp
-          "
-        >
+        <div class="caja-icono flex column center">
           <img src="img/icono3.svg" alt="" />
           <p>
             podrás vivir auténticas
@@ -241,7 +215,7 @@
 
     <!-- QUÉ TIENES QUE HACER -->
 
-    <section  id="que-tienes-que-hacer" class="hacer flex column center padding">
+    <section  id="que-tienes-que-hacer" class="hacer flex column center padding borde-blanco">
       <div class="hacer-titular">
         <h2 class="titular">¿qué tienes que hacer?</h2>
       </div>
@@ -250,22 +224,20 @@
           <img src="img/img-chica.png" alt="" />
         </div>
         <div class="hacer-contenedor-textos flex column center">
-          <div class="hacer-textos hacer-texto1 flex row">
+          <div class="hacer-textos flex row anim-text1">
             <img src="img/1.svg" alt="" />
             <p>
               <strong>grábate un vídeo de hasta 30"</strong> mostrando lomejor
               de tu ciudad y contándonos por qué debes ganar esta viaje.
             </p>
           </div>
-          <div class="hacer-textos flex row wow
-          animate__animated animate__fadeInRight">
+          <div class="hacer-textos flex row anim-text2">
             <img src="img/2.svg" alt="" />
             <p>súbelo a
               <strong>instagram</strong>
             </p>
           </div>
-          <div class="hacer-textos flex row wow
-          animate__animated animate__fadeInRight">
+          <div class="hacer-textos flex row anim-text3">
             <img src="img/3.svg" alt="" />
             <p>
               menciona a </br><strong>@visitbiscay</strong>,
@@ -330,16 +302,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script src="js/wow.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-          $('.body').show();
-      });
-      </script>
     <script>
-      new WOW().init();
-    </script>
-    <script>
-     
+  
+
       gsap.from('.imagen-avion', {
         duration: 1,
         scale: 0,
@@ -385,32 +350,74 @@
         opacity: 0,
         delay: 1,
       });
+      gsap.registerPlugin(ScrollTrigger);
 
-      const tl = gsap.timeline( { 
-   
-      scrollTrigger: {
-        trigger: ".hacer",
-        start: "+=133 80%",
-        end: "+=200 40%",
-        scrub: true,
-        markers: false,
-        toggleActions: "play reverse play reverse",
-      }
+      var tarjeta = gsap.timeline({
+        scrollTrigger:{
+          trigger: '.que-buscamos',
+          markers: false, 
+          start:'top-=100 top',
+          ease: 'easeInOut', 
+
+         
+        }
+      });
+      var general = gsap.timeline({
+        scrollTrigger:{
+          trigger: '.video-general',
+          markers: false, 
+          start:'top-=300 top',
+          ease: 'easeOut', 
+        }
+      });
+      general.from('.video-general',{ opacity:'0', duration: 3});
       
-    });
-    
-    tl
-      .to('.hacer-texto1', { opacity: 1, duration: 0.5 })
+      tarjeta.from('.anim-tarj1',{ y: '500', duration: .5 });
+      tarjeta.from('.anim-tarj2',{ y: '500', duration: .5 },'-=.3');
+      tarjeta.from('.anim-tarj3',{ y: '500', duration: .5 },'-=.3');
+      tarjeta.from('.anim-tarj4',{ y: '500', duration: .5 },'-=.3');
+
+      var icono = gsap.timeline({
+        scrollTrigger:{
+          trigger: '.participar',
+          markers: false, 
+          start:'top-=300 top',
+          ease: 'easeOut', 
+        }
+      });
+      icono.from('.caja-icono',{ opacity:'0', duration: 2});
+
+      var texto = gsap.timeline({
+        scrollTrigger:{
+          trigger: '.hacer',
+          markers: false, 
+          start:'top-=400 top',
+          ease: 'easeOut', 
+        }
+      });
+      texto.from('.anim-text1',{ x: '1000', duration: 1 , opacity:'0'});
+      texto.from('.anim-text2',{ x: '1000', duration: 1 , opacity:'0'},'-=.8');
+      texto.from('.anim-text3',{ x: '1000', duration: 1 , opacity:'0'},'-=.8');
       
+      </script>
+
+    <script>
+     
+      
+
 
     </script>
     <script>
+
+
+    </script>
+     <!--<script>
       new Splide(".splide", {
         type: "loop",
         perPage: 1,
         autoplay: true,
       }).mount();
-    </script>
+    </script>-->
 
     <!-- Google Tag Manager (noscript) -->
     <noscript
