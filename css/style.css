@@ -170,6 +170,7 @@ header li a {
   top: 0;
   background: transparent;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100%;
   padding-top: 30vh;
   z-index: 20;
@@ -178,6 +179,7 @@ header li a {
   position: absolute;
   top: 0;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100%;
 }
 
