@@ -30,12 +30,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
     />
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/index.js"></script>
 <script>
-  $(document).ready(function() {
-     $('body').show()
-  });
+  window.onload = function() {
+     $('.body').show()
+  };
 </script>
 
     <!-- Google Tag Manager -->
@@ -54,9 +52,9 @@
     <!-- End Google Tag Manager -->
   </head>
 
-  <body style="display: none;">
+  <body>
     <!--LOADER-->
-    <div class="body" >
+    <div class="body" style="display: none;">
 
     <div class="loader"></div>
 
@@ -326,7 +324,8 @@
     <!-- SCRIPTS -->
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
