@@ -120,12 +120,37 @@
       </div>
     </section>
 
-    <!--VÍDEO GENERAL-->
+    <!--VÍDEO GENERAL -->
 
     <section id="general" class="video-general flex center">
         <img class="video-play" src="img/play.svg" alt="icono play" onclick="abrirVideoGeneral()">
         <img class="video-general-imagen wow animate__animated animate__fadeIn" src="img/general.png" alt="ilustración vídeo general" onclick="abrirVideoGeneral()">
     </section>
+
+    <section id="general-movil" class="video-general flex center">
+      <img class="video-play" src="img/play.svg" alt="icono play" onclick="abrirVideoGeneralMovil()">
+      <img class="video-general-imagen wow animate__animated animate__fadeIn" src="img/general.png" alt="ilustración vídeo general" onclick="abrirVideoGeneralMovil()">
+  </section>
+
+    <!--VIDEOS -->
+
+    <section id="videos">
+      <div id="pop-up-video-general" class="pop-up-video none">
+          <img class="boton-cerrar" src="img/close.svg" alt="" onclick="cerrarVideoGeneral()">
+          <video id="video-general" class="video" controls controlsList="nodownload" preload="auto" src="https://player.vimeo.com/external/585708936.hd.mp4?s=a87c0c8b2ed60582bd8ede5f17570aedebd20aa1&profile_id=174" type="video/mp4"></video>
+        </video>
+          <div id="cerrar1" class="cerrar" onclick="cerrarVideoGeneral()"></div>
+      </div>
+    </section> 
+
+      <section id="videos-movil">
+        <div id="pop-up-video-general-movil" class="pop-up-video none">
+            <img class="boton-cerrar" src="img/close.svg" alt="" onclick="cerrarVideoGeneralMovil()">
+            <video id="video-general-movil" class="video" controls controlsList="nodownload" preload="auto" src="https://player.vimeo.com/external/585708968.hd.mp4?s=36510268ca997c06158999358bb91e07cb455ed8&profile_id=174" type="video/mp4"></video>
+          </video>
+            <div id="cerrar1-movil" class="cerrar" onclick="cerrarVideoGeneralMovil()"></div>
+        </div>  
+      </section>
 
     <!--QUÉ BUSCAMOS-->
 

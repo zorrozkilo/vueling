@@ -35,6 +35,8 @@
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /*----LOADER-----*/
@@ -267,6 +269,9 @@ header li a {
   width: 80%;
   cursor: pointer;
 }
+#general-movil {
+  display: none;
+}
 .que-buscamos p {
   max-width: 650px;
   text-align: center;
@@ -352,7 +357,59 @@ footer a {
 .instagram a:hover {
   color: var(--amarillo);
 }
+.pop-up-video {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 98;
+}
 
+.cerrar {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+
+.boton-cerrar {
+  position: absolute;
+  width: 20px;
+  top: 50px;
+  right: 50px;
+  z-index: 98;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.video {
+  height: 90vh;
+  z-index: 99;
+}
+.legal {
+  max-width: 800px;
+  margin: auto;
+}
+.legal h1,
+.legal h2 {
+  text-align: left;
+  margin: 0;
+}
+.legal h1 {
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+.legal h2 {
+  font-size: 30px;
+}
+.legal p {
+  text-transform: none;
+  margin: 30px 0 80px;
+}
 @media (max-width: 1024px) {
   .row {
     flex-direction: column !important;
@@ -385,8 +442,13 @@ footer a {
   }
   .boton-menu {
     display: block;
-
+    position: absolute;
+    top: 40px;
+    right: 40px;
     width: 30px;
+  }
+  .boton-cerrar-menu {
+    width: 20px;
   }
   .hero h1 {
     font-size: 23px;
@@ -396,6 +458,18 @@ footer a {
   }
   .avion img {
     margin-top: -95px;
+  }
+  #general {
+    display: none;
+  }
+  #general-movil {
+    display: flex;
+  }
+  .video {
+    height: 80vh;
+  }
+  .boton-cerrar {
+    top: 20px;
   }
   .carrusel div {
     width: 100%;
@@ -435,39 +509,6 @@ footer a {
   .instagram {
     margin-bottom: 20px;
   }
-}
-.pop-up-video {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  position: fixed;
-  top: 0;
-  align-items: center;
-  justify-content: center;
-  z-index: 98;
-}
-
-.cerrar {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.9);
-  cursor: pointer;
-}
-
-.boton-cerrar {
-  position: absolute;
-  width: 20px;
-  top: 50px;
-  right: 50px;
-  z-index: 98;
-  z-index: 99;
-  cursor: pointer;
-}
-
-.video {
-  height: 90vh;
-  z-index: 99;
 }
 
 .none {
