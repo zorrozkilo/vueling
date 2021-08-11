@@ -24,12 +24,8 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="preload" href="css/style.css" as="styles">
     <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
@@ -52,7 +48,7 @@
 
   <body>
     <!--LOADER-->
-    <div class="body" >
+    <div class="body" style="display: none;">
 
     <div class="loader"></div>
 
@@ -127,7 +123,8 @@
     <!--VÍDEO GENERAL-->
 
     <section id="general" class="video-general flex center">
-        <img src="img/imagen-video.png" alt="" onclick="abrirVideoGeneral()">
+        <img class="video-play" src="img/play.svg" alt="icono play" onclick="abrirVideoGeneral()">
+        <img class="video-general-imagen wow animate__animated animate__fadeIn" src="img/general.png" alt="ilustración vídeo general" onclick="abrirVideoGeneral()">
     </section>
 
     <!--QUÉ BUSCAMOS-->
@@ -140,10 +137,10 @@
             <h2 class="titular titular-mediano">¡te estamos buscando!</h2>  
         </div>
         <div class="carrusel flex row">
-          <div class="anim-tarj1"> <img src="img/naturelovers-cast-des.png" alt=""></div>
-          <div class="anim-tarj2"> <img src="img/sealovers-cast-des.png" alt=""></div>
-          <div class="anim-tarj3"> <img src="img/urbanlovers-cast-des.png" alt=""></div>
-          <div class="anim-tarj4"> <img src="img/foodlovers-cast-des.png" alt=""></div>
+          <div class="anim-tarj1 wow animate__animated animate__fadeInUp"> <img src="img/naturelovers-cast-des.png" alt=""></div>
+          <div class="anim-tarj2 wow animate__animated animate__fadeInUp" data-wow-delay=".2s"> <img src="img/sealovers-cast-des.png" alt=""></div>
+          <div class="anim-tarj3 wow animate__animated animate__fadeInUp" data-wow-delay=".4s"> <img src="img/urbanlovers-cast-des.png" alt=""></div>
+          <div class="anim-tarj4 wow animate__animated animate__fadeInUp" data-wow-delay=".6s"> <img src="img/foodlovers-cast-des.png" alt=""></div>
         </div>
           
     </section>
@@ -186,7 +183,7 @@
         <h2 class="titular">¿por qué participar?</h2>
       </div>
       <div class="participar-iconos flex row">
-        <div class="caja-icono flex column center">
+        <div class="caja-icono flex column center wow animate__animated animate__fadeIn">
           <img src="img/icono1.svg" alt="" />
           <p>
             PODRÁS MOSTRAR AL MUNDO LO MÁS BONITO DE TU CIUDAD A TRAVÉS DE LAS
@@ -194,7 +191,7 @@
             <strong>VISITBISCAY</strong> Y <strong>BILBAOTURISMO</strong>.
           </p>
         </div>
-        <div class="caja-icono flex column center">
+        <div class="caja-icono flex column center wow animate__animated animate__fadeIn" data-wow-delay=".2s">
           <img src="img/icono2.svg" alt="" />
           <p>
             podrás ganar un fantástico
@@ -202,7 +199,7 @@
             <strong>dos personas</strong> a <strong>bilbao bizkaia</strong>.
           </p>
         </div>
-        <div class="caja-icono flex column center">
+        <div class="caja-icono flex column center wow animate__animated animate__fadeIn" data-wow-delay=".2s">
           <img src="img/icono3.svg" alt="" />
           <p>
             podrás vivir auténticas
@@ -224,20 +221,20 @@
           <img src="img/img-chica.png" alt="" />
         </div>
         <div class="hacer-contenedor-textos flex column center">
-          <div class="hacer-textos flex row anim-text1">
+          <div class="hacer-textos flex row anim-text1 wow animate__animated animate__fadeInRight">
             <img src="img/1.svg" alt="" />
             <p>
               <strong>grábate un vídeo de hasta 30"</strong> mostrando lomejor
               de tu ciudad y contándonos por qué debes ganar esta viaje.
             </p>
           </div>
-          <div class="hacer-textos flex row anim-text2">
+          <div class="hacer-textos flex row anim-text2 wow animate__animated animate__fadeInRight">
             <img src="img/2.svg" alt="" />
             <p>súbelo a
               <strong>instagram</strong>
             </p>
           </div>
-          <div class="hacer-textos flex row anim-text3">
+          <div class="hacer-textos flex row anim-text3 wow animate__animated animate__fadeInRight">
             <img src="img/3.svg" alt="" />
             <p>
               menciona a </br><strong>@visitbiscay</strong>,
@@ -303,64 +300,76 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script src="js/wow.min.js" type="text/javascript"></script>
     <script>
-  
+       $(document).ready(function () {
+        $('.body').show()
 
-      gsap.from('.imagen-avion', {
-        duration: 1,
-        scale: 0,
-        x: '-30%',
-        ease:'easeOut',
-        delay: .8,
-      });
+        new WOW().init();
 
-      gsap.from('.imagen-avion1', {
-        duration: 1,
-        y: '5px',
-        repeat: -1, 
-        yoyo: true,
-        delay: 1.5,
-        ease: Power1.easeInOut,
-      });
+        gsap.from('.imagen-avion', {
+          duration: 1,
+          scale: 0,
+          x: '-30%',
+          ease:'easeOut',
+          delay: .8,
+        });
 
-      gsap.from('.imagen-nubes', {
-        duration: 1,
-        y:'10px',
-        repeat: -1, 
-        yoyo: true,
-        ease: Power1.easeInOut,
-        delay: 1,
-      });
-      gsap.from('.imagen-nubes1', {
-        duration: 1,
-        opacity: 0,
-        delay: 1,
-      });
+        gsap.from('.imagen-avion1', {
+          duration: 1,
+          y: '5px',
+          repeat: -1, 
+          yoyo: true,
+          delay: 1.5,
+          ease: Power1.easeInOut,
+        });
 
-      gsap.from('.imagen-pajaro', {
-        duration: 1,
-        y: '10px',
-        repeat: -1, 
-        yoyo: true,
-        delay: 1.2,
-        ease: Power1.easeInOut,
-      });
+        gsap.from('.imagen-nubes', {
+          duration: 1,
+          y:'10px',
+          repeat: -1, 
+          yoyo: true,
+          ease: Power1.easeInOut,
+          delay: 1,
+        });
+        gsap.from('.imagen-nubes1', {
+          duration: 1,
+          opacity: 0,
+          delay: 1,
+        });
 
-      gsap.from('.imagen-pajaro1', {
-        duration: 1,
-        opacity: 0,
-        delay: 1,
-      });
-      gsap.registerPlugin(ScrollTrigger);
+        gsap.from('.imagen-pajaro', {
+          duration: 1,
+          y: '10px',
+          repeat: -1, 
+          yoyo: true,
+          delay: 1.2,
+          ease: Power1.easeInOut,
+        });
 
-      var tarjeta = gsap.timeline({
-        scrollTrigger:{
-          trigger: '.que-buscamos',
-          markers: false, 
-          start:'top-=100 top',
-          ease: 'easeInOut', 
+        gsap.from('.imagen-pajaro1', {
+          duration: 1,
+          opacity: 0,
+          delay: 1,
+        });
 
-         
-        }
+        gsap.from('.video-play', {
+          duration: .8,
+          scale:'1.2',
+          repeat: -1, 
+          yoyo: true,
+          ease: Power1.easeInOut,
+        });
+      });  
+
+        /*gsap.registerPlugin(ScrollTrigger);
+
+        var tarjeta = gsap.timeline({
+          scrollTrigger:{
+            trigger: '.que-buscamos',
+            markers: false, 
+            start:'top-=100 top',
+            ease: 'easeInOut', 
+          }
+        });
       });
       var general = gsap.timeline({
         scrollTrigger:{
@@ -397,20 +406,9 @@
       });
       texto.from('.anim-text1',{ x: '1000', duration: 1 , opacity:'0'});
       texto.from('.anim-text2',{ x: '1000', duration: 1 , opacity:'0'},'-=.8');
-      texto.from('.anim-text3',{ x: '1000', duration: 1 , opacity:'0'},'-=.8');
-      
+      texto.from('.anim-text3',{ x: '1000', duration: 1 , opacity:'0'},'-=.8');*/ 
       </script>
 
-    <script>
-     
-      
-
-
-    </script>
-    <script>
-
-
-    </script>
      <!--<script>
       new Splide(".splide", {
         type: "loop",

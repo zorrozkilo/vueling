@@ -256,7 +256,14 @@ header li a {
   font-size: 40px;
   margin-top: 50px;
 }
-.video-general img {
+.video-play {
+  position: relative;
+  max-width: 70px;
+  top: 50%;
+  left: 40%;
+  cursor: pointer;
+}
+.video-general-imagen {
   width: 80%;
   cursor: pointer;
 }
